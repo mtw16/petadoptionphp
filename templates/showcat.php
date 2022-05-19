@@ -1,3 +1,18 @@
+<?php
+	try {	
+		require "../configs/config.php"; 
+    
+      $image = '<img class="d-block w-100" src="images/' . $cat["photoLocation"] . '">';
+
+      if($imageURL != '') 
+        $image = '<img class="d-block w-100" src="' . $imageURL . $cat["photoLocation"] . '">';
+
+  echo "<script>console.log('Console: " . $image . "' );</script>";
+} catch(PDOException $error) {
+  echo $sql . "<br>" . $error->getMessage();
+}
+
+?>
 <!-- Begin showcat -->
 <div class="card border-primary" style="width: 50%"> 
               <div class="card-header">
@@ -8,7 +23,7 @@
                   <p class="card-text">Age: <?php echo $cat["age"]; ?></p>
                   <p class="card-text">Breed: <?php echo $cat["breed"]; ?></p>
                   <div class = "col-sm">
-                      <img class="d-block w-100" src="./images/cat2.jpeg" alt="Third slide">
+                      <?php echo $image ?>
                    </div>
                 </div> <!-- Body -->
                 <div class="card-footer">
