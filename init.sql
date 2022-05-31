@@ -29,7 +29,7 @@ VALUES ('Meowzy', 'cat', '13', 'white cat', 'cat2.jpeg', 'small', 'very smelly c
 INSERT INTO pet (name, type, age, breed, photoLocation, size, description, status)
 VALUES ('Baxter', 'dog', '12', 'miniature schnauzer', 'dog.jpeg' , 'small', 'very nice dog', 'available');
 INSERT INTO pet (name, type, age, breed, photoLocation, size, description, status)
-VALUES ('Suka', 'dog', '6', 'husky', 'dog2.jpeg' , 'large', 'Is a drama queen', 'available');
+VALUES ('Sam', 'dog', '6', 'husky', 'dog2.jpeg' , 'large', 'Is a drama queen', 'available');
 
 CREATE USER 'app'@localhost IDENTIFIED BY 'test';
 GRANT ALL PRIVILEGES ON *.* TO 'app'@localhost IDENTIFIED BY 'test';
